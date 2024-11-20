@@ -17,5 +17,5 @@ We will focus on three of these questions for detailed analysis.
 
 ## Data
 
-Data Source: https://jacobfilipp.com/hammer/
-Raw Data: https://drive.google.com/drive/folders/1405hnikgojgPvGahPralaccDlZRohLRv?usp=sharing
+- Data Source: https://jacobfilipp.com/hammer/
+- Raw Data: https://drive.google.com/drive/folders/1405hnikgojgPvGahPralaccDlZRohLRv?usp=sharing
