@@ -1,25 +1,20 @@
-# Analyzing Crime Trends in Toronto (2014–2023): Data, Models, and Insights
+# Supplier Pricing and Promotion Analysis
 
 ## Overview
 
-This repository supports the project analyzing crime trends in Toronto (2014–2023). The study investigates temporal and spatial variations in crime types, uncovering significant patterns and providing actionable insights for policymakers. The repository includes all data, scripts, and outputs necessary to reproduce the analyses and results presented in the study.
+This project explores pricing strategies, promotional impacts, and temporal price trends across different suppliers. The analysis leverages statistical and machine learning methods to address key research questions and uncover actionable insights.
 
-## File Structure
+## Research Questions
 
-The repository is organized as follows:
+We are investigating the following key questions:
 
--  `data/raw_data`: Contains the raw data obtained from the Toronto Police Service Public Safety Data Portal and other sources.
+- Are pricing strategies consistent across suppliers? Can supplier influence on prices be differentiated into commodity-level and supplier-level differences?
+- Did the sale actually increase sales (using indirect metrics such as “stock status”)?
+- Are there cyclical or trend fluctuations in commodity prices? Do promotions occur more frequently at particular points in time?
+- Is the price of an item affected by multiple interacting factors such as Sale, Brand, Unit size, etc.?
+- Do prices change significantly over time? Do price fluctuations trend consistently across suppliers? Is the supplier's price impact dynamic in the time dimension?
+We will focus on three of these questions for detailed analysis.
 
--  `data/analysis_data`: Includes the cleaned and processed dataset used for analysis. Data transformations, normalizations, and variable constructions are documented in the Appendix.
+## Data
 
--  `model`: Contains the fitted models, including static and dynamic Bayesian hierarchical models used to analyze crime trends.
-
--  `other`: Includes relevant sketches, documentation, and additional notes about project workflows, including LLM-assisted content creation.
-
--  `paper`: Contains the Quarto source files, bibliography, and final PDF of the report detailing the study findings.
-
--  `scripts`: Holds R scripts used for data cleaning, visualization, modeling, and analysis.
-
-## Statement on LLM Usage
-
-Aspects of this project were developed using LLM tools, including ChatGPT to streamline code generation, enhance documentation, and refine analyses. The abstract, introduction, and other sections were iteratively developed with DeepL and Grammarly assistance. Full interaction logs are available in other/llms/usage.txt.
+Data Source: https://jacobfilipp.com/hammer/

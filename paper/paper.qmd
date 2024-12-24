@@ -419,7 +419,7 @@ We use weakly informative priors for all parameters to balance interpretability 
 
 -   **Residual variance:** $\sigma^2 \sim \text{Cauchy} (0,2)$. The Cauchy prior accommodates greater variability in residuals, providing robustness to outliers or high noise levels.
 
-Detailed prior distributions, their visualizations, and sensitivity analyses are provided in Appendix-\[@sec-prior-distributions\].
+Detailed prior distributions, their visualizations, and sensitivity analyses are provided in Appendix-[@sec-prior-distributions].
 
 We run the model in R [@R] using the `brms` package of @brms.
 
@@ -617,7 +617,7 @@ kable(rf_importance, col.names = c("Feature", "Increase in Node Purity"),
 
 -   The `AREA_NAME` variable, representing the community, has a moderate importance score (6155.32). This reflects that community-specific factors, such as socio-economic conditions or policing strategies, play a significant role in explaining crime rate variability across regions. The importance of **`AREA_NAME`** highlights the spatial variability in crime rates, consistent with the random intercepts used in the Bayesian models. It shows that local factors specific to each community are important predictors of crime.
 
--    The variable `Year` has the lowest importance score (1276.36) compared to the other features. This suggests that temporal trends contribute relatively less to predicting crime rates, indicating that crime rates may be relatively stable over time, with fewer year-on-year variations. The relatively low importance of **`Year`** supports the idea that temporal trends have a limited impact compared to spatial and categorical factors. This finding is consistent with the dynamic Bayesian model, where the fixed effect for **`Year`** was small but statistically significant.
+-   The variable `Year` has the lowest importance score (1276.36) compared to the other features. This suggests that temporal trends contribute relatively less to predicting crime rates, indicating that crime rates may be relatively stable over time, with fewer year-on-year variations. The relatively low importance of **`Year`** supports the idea that temporal trends have a limited impact compared to spatial and categorical factors. This finding is consistent with the dynamic Bayesian model, where the fixed effect for **`Year`** was small but statistically significant.
 
 ## Comparison
 
@@ -723,7 +723,7 @@ pp_check(dynamic_model, type = "scatter_avg") +
 
 @fig-scatterppc compares observed crime rates (`y`) against the average predicted crime rates (`y_rep`) from the dynamic model. The dashed line represents perfect alignment, where predictions would match observations exactly. While most points cluster near the line for lower crime rates, there is greater dispersion as crime rates increase, suggesting that the model performs well for smaller values but struggles with higher crime rate predictions. This indicates a potential area for improvement in capturing extreme variations.
 
-We used Bayesian hierarchical models for analysis, assigning weakly informative priors to all parameters. The priors ensure sufficient regularization without overly constraining the model. Full details, including prior visualizations and sensitivity checks, can be found in Appendix-\[@sec-prior-distributions\]. Posterior predictive checks above demonstrate that both models replicate the observed data distributions well. Comprehensive diagnostics, including convergence checks and sensitivity analyses, are provided in Appendix-\[@sec-diagnostics\].
+We used Bayesian hierarchical models for analysis, assigning weakly informative priors to all parameters. The priors ensure sufficient regularization without overly constraining the model. Full details, including prior visualizations and sensitivity checks, can be found in Appendix-[@sec-prior-distributions]. Posterior predictive checks above demonstrate that both models replicate the observed data distributions well. Comprehensive diagnostics, including convergence checks and sensitivity analyses, are provided in Appendix-[@sec-diagnostics].
 
 In the results section, we used the `brms` package [@brms] in R to implement Bayesian hierarchical models, perform posterior predictive checks, and evaluate model fit using diagnostic metrics. The `caret` package [@caret] was used to split the data into training and testing sets, ensuring a robust evaluation of model performance. Additionally, a Random Forest model was developed using the `randomForest` package [@randomforest] to provide an alternative non-parametric comparison.
 
@@ -904,7 +904,7 @@ ggplot(prior_posterior_static, aes(x = Value, fill = Distribution)) +
 
 @fig-priorposteriorstatic compares the prior and posterior distributions for a parameter in the static model. The prior reflects a wide range of possible values centered around 0, allowing for flexibility in the absence of strong prior knowledge. The posterior is much narrower and more peaked compared to the prior. It is centered at a specific value, indicating that the observed data provided strong evidence to refine the parameter estimate. The prior distribution shows the initial belief about the parameter, which allows for wide variability. The posterior demonstrates how the data constrained the parameter estimate, concentrating it within a smaller range and thus reducing uncertainty. This comparison highlights the role of Bayesian updating: the prior reflects weak initial assumptions, while the posterior incorporates observed data to provide a more precise estimate of the parameter. This process ensures that the model balances prior beliefs with evidence from the data.
 
-####  Dynamic Model
+#### Dynamic Model
 
 ```{r}
 #| eval: true
