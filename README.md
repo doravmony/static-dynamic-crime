@@ -22,4 +22,4 @@ The repository is organized as follows:
 
 ## Statement on LLM Usage
 
-Aspects of this project were developed using LLM tools, including ChatGPT to streamline code generation, enhance documentation, and refine analyses. The abstract, introduction, and other sections were iteratively developed with DeepL and Grammarly assistance. Full interaction logs are available in other/llms/usage.txt.
+Aspects of this project were developed using LLM tools, including ChatGPT to streamline code generation, enhance documentation, and refine analyses. The abstract, introduction, and other sections were iteratively developed with DeepL and Grammarly assistance. Full interaction logs are available in `other/llms/usage.txt`.
